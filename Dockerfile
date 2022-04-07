@@ -1,10 +1,8 @@
 FROM pihole/pihole:latest
 RUN apt update && apt install -y unbound
-#get root.hints
-RUN curl https://www.internic.net/domain/named.root -o /etc/unbound/unbound.conf.d/root.hints
+
 RUN echo "net.core.rmem_max=4194304" >> /etc/sysctl.conf
 RUN echo "net.core.wmem_max=4194304" >> /etc/sysctl.conf
-#COPY root.hints /var/lib/unbound/root.hints
 
 COPY lighttpd-external.conf /etc/lighttpd/external.conf
 #COPY unbound-pihole.conf /etc/unbound/unbound.conf.d/pi-hole.conf
