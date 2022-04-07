@@ -24,7 +24,7 @@ server:
     # Use this only when you downloaded the list of primary root servers!
     # Read  the  root  hints from this file. Make sure to 
     # update root.hints evry 5-6 months.
-    root-hints: "/var/lib/unbound/root.hints"
+    #root-hints: "/var/lib/unbound/root.hints"
     
     # Trust glue only if it is within the servers authority
     harden-glue: yes
@@ -82,7 +82,7 @@ server:
     do-daemonize: no
     
     # Number  of  bytes size of the aggressive negative cache.
-    # neg-cache-size: 4m
+    neg-cache-size: 4m
     
     # Send minimum amount of information to upstream servers to enhance privacy
     qname-minimisation: yes
@@ -121,7 +121,7 @@ server:
     
     # Ensure kernel buffer is large enough to not lose messages in traffix spikes
     so-rcvbuf: 1m
-    # so-sndbuf: 1m
+    so-sndbuf: 1m
     
     # Set the total number of unwanted replies to keep track of in every thread.
     # When it reaches the threshold, a defensive action of clearing the rrset
