@@ -1,8 +1,8 @@
 FROM pihole/pihole:latest
 RUN apt update && apt install -y unbound
 #get root.hints
-RUN curl https://www.internic.net/domain/named.root -o root.hints
-COPY root.hints /var/lib/unbound/root.hints
+RUN curl https://www.internic.net/domain/named.root -o /var/lib/unbound/root.hints
+#COPY root.hints /var/lib/unbound/root.hints
 
 COPY lighttpd-external.conf /etc/lighttpd/external.conf
 #COPY unbound-pihole.conf /etc/unbound/unbound.conf.d/pi-hole.conf
