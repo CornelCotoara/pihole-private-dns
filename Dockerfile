@@ -1,8 +1,7 @@
 FROM pihole/pihole:latest
 RUN apt update && apt install -y unbound
 #get root.hints
-RUN curl https://www.internic.net/domain/named.root -o /var/lib/unbound/root.hints
-RUN curl https://www.internic.net/domain/named.root -o /etc/unbound/root.hints
+RUN curl https://www.internic.net/domain/named.root -o /etc/unbound/unbound.conf.d/root.hints
 RUN echo "net.core.rmem_max=1048576" >> /etc/sysctl.conf
 #COPY root.hints /var/lib/unbound/root.hints
 
