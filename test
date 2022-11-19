@@ -54,7 +54,7 @@ server:
     # data in the cache is as the domain owner intended, higher values,
     # especially more than an hour or so, can lead to trouble as the data in
     # the cache does not match up with the actual data anymore
-    cache-min-ttl: 300
+    cache-min-ttl: 360
     cache-max-ttl: 86400
     
     # Have unbound attempt to serve old responses from cache with a TTL of 0 in
