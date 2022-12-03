@@ -48,6 +48,10 @@ server:
     # private-address: 192.168.0.0/16
     rrset-roundrobin: yes
     
+    # more cache memory. rrset-cache-size should twice what msg-cache-size is.
+    msg-cache-size: 50m
+    rrset-cache-size: 100m
+    
     # Time to live minimum for RRsets and messages in the cache. If the minimum
     # kicks in, the data is cached for longer than the domain owner intended,
     # and thus less queries are made to look up the data. Zero makes sure the
@@ -111,10 +115,6 @@ server:
     # most users running on small networks or on a single machine, it should be unnecessary
     # to seek performance enhancement by increasing num-threads above 1.
     num-threads: 1
-
-    # more cache memory. rrset-cache-size should twice what msg-cache-size is.
-    msg-cache-size: 50m
-    rrset-cache-size: 100m
    
     # Faster UDP with multithreading (only on Linux).
     so-reuseport: yes
