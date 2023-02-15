@@ -8,4 +8,4 @@ COPY 99-edns.conf /etc/dnsmasq.d/99-edns.conf
 COPY s6/unbound.run /etc/services.d/unbound/run
 RUN chmod +x /etc/services.d/unbound/run
 
-ENTRYPOINT ["/init"]
+ENTRYPOINT ["/s6-init"]
