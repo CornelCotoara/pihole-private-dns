@@ -1,3 +1,2 @@
 #!/command/execlineb -P
-
-/etc/init.d/unbound start
+unbound -v
