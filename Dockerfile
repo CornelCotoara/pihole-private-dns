@@ -1,5 +1,5 @@
 #Test ci/cd on devel push!!!
-FROM pihole/pihole:v6-pre-alpha
+FROM pihole/pihole:latest
 RUN apt update && apt install -y unbound
 
 COPY lighttpd-external.conf /etc/lighttpd/external.conf
