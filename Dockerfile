@@ -1,5 +1,4 @@
 #Test ci/cd on devel push alpine!
-#
 FROM pihole/pihole:v6-alpine-play
 RUN apk update && apk install -y unbound
 COPY lighttpd-external.conf /etc/lighttpd/external.conf
