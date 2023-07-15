@@ -6,6 +6,7 @@ COPY lighttpd-external.conf /etc/lighttpd/external.conf
 COPY unbound_tweaked /etc/unbound/unbound.conf.d/pi-hole.conf
 COPY 99-edns.conf /etc/dnsmasq.d/99-edns.conf
 RUN mkdir -p /etc/services.d/unbound
+RUN mkdir -p /var/lib/unbound
 RUN sh -c 'curl https://www.internic.net/domain/named.root > /var/lib/unbound/root.hints'
 #RUN sh -c 'cat /var/lib/unbound/root.hints'
 COPY s6/unbound.run /etc/services.d/unbound/run
