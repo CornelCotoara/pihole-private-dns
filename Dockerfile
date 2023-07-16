@@ -19,4 +19,4 @@ RUN sh -c 'curl https://www.internic.net/domain/named.root > /var/lib/unbound/ro
 COPY s6/unbound.run /etc/services.d/unbound/run
 RUN chmod +x /etc/services.d/unbound/run
 ENV IPv6 False
-ENTRYPOINT ["/s6-init"]
+ENTRYPOINT ["/init"]
