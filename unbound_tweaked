@@ -151,4 +151,4 @@ server:
     forward-zone:
        name: "."
        forward-tls-upstream: no
-       forward-addr: proxy-dns
+       forward-addr: 172.16.11.1@53000
