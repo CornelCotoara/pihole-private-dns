@@ -147,8 +147,8 @@ server:
     private-address: 10.0.0.0/8
     private-address: fd00::/8
     private-address: fe80::/10
-
+    
     forward-zone:
        name: "."
        forward-tls-upstream: no
-       forward-addr: 172.16.11.1@53000
+       forward-addr: proxy-dns
