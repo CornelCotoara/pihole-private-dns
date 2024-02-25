@@ -148,6 +148,7 @@ server:
     private-address: fd00::/8
     private-address: fe80::/10
 
-forward-zone:
-    name: "."
-     forward-addr: 127.0.0.1@53000
+    forward-zone:
+       name: "."
+
+       forward-addr: 172.16.11.1@53000
