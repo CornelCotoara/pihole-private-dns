@@ -60,7 +60,7 @@ server:
     # data in the cache is as the domain owner intended, higher values,
     # especially more than an hour or so, can lead to trouble as the data in
     # the cache does not match up with the actual data anymore
-    cache-min-ttl: 1800
+    cache-min-ttl: 3600
     cache-max-ttl: 86400
     
     # Have unbound attempt to serve old responses from cache with a TTL of 0 in
@@ -153,5 +153,4 @@ server:
     
     forward-zone:
        name: "."
-       forward-tls-upstream: no
-       forward-addr: 172.16.11.1@53000
+       forward-addr: 172.16.11.254
