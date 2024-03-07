@@ -150,9 +150,14 @@ server:
     private-address: 10.0.0.0/8
     private-address: fd00::/8
     private-address: fe80::/10
+
+    config zone 'priv.dns'
+	option enabled '1'
+	option fallback '0'
+	option zone_type 'forward_zone'
+	list server '168.63.129.16'
+	list zone_name 'priv.dns.'
     
     forward-zone:
-       name: "priv.dns."
-       forward-addr: 168.63.129.16
-       name: "."
-       forward-addr: 172.16.11.254
+    name: "."
+    forward-addr: 172.16.11.254
