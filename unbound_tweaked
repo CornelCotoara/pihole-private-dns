@@ -159,5 +159,5 @@ server:
 	list zone_name 'priv.dns.'
     
     forward-zone:
-    name: "."
-    forward-addr: 172.16.11.254
+       name: "."
+       forward-addr: 172.16.11.254
