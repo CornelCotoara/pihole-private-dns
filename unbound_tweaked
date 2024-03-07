@@ -152,5 +152,7 @@ server:
     private-address: fe80::/10
     
     forward-zone:
+       name: "priv.dns."
+       forward-addr: 168.63.129.16
        name: "."
        forward-addr: 172.16.11.254
