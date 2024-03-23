@@ -19,6 +19,7 @@ server:
 
     #allow trace
     access-control: 192.168.25.24/31 allow_snoop
+    access-control: 127.0.0.1 allow_snoop
 
     # May be set to yes if you have IPv6 connectivity
     do-ip6: no
