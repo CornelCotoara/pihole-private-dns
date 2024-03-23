@@ -17,6 +17,9 @@ server:
     #fix query using localhost
     do-not-query-localhost: no
 
+    #allow trace
+    access-control: 192.168.25.24/31 allow_snoop
+
     # May be set to yes if you have IPv6 connectivity
     do-ip6: no
 
