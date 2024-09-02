@@ -18,7 +18,7 @@ server:
     do-not-query-localhost: no
 
     #allow trace
-    access-control: 10.1.1.5/32 allow_snoop
+    access-control: 10.1.1.100/32 allow_snoop
     access-control: 127.0.0.1 allow_snoop
 
     # May be set to yes if you have IPv6 connectivity
