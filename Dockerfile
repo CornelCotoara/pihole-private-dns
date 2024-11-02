@@ -18,5 +18,5 @@ COPY start_unbound_and_s6_init.sh start_unbound_and_s6_init.sh
 COPY s6/unbound.run /etc/services.d/unbound/run
 COPY s6/pihole.run /etc/services.d/pihole/run
 RUN chmod +x /etc/services.d/unbound/run
-
+ENV IPv6 False
 ENTRYPOINT ["start.sh"]
