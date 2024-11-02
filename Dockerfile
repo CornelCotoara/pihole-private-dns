@@ -1,4 +1,4 @@
-FROM pihole/pihole:development
+FROM pihole/pihole:latest
 RUN apt update && apt install -y unbound
 COPY lighttpd-external.conf /etc/lighttpd/external.conf
 COPY unbound_tweaked /etc/unbound/unbound.conf.d/pi-hole.conf
