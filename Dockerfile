@@ -1,8 +1,8 @@
 ARG alpine_version="3.20"
-ARG S6_OVERLAY_VERSION=3.2.0.2
+ARG S6_OVERLAY_VERSION="3.2.0.2"
 FROM pihole/pihole:development
 
-RUN apk add -X https://dl-cdn.alpinelinux.org/alpine/${alpine_version} /main -u alpine-keys --allow-untrusted
+RUN apk add -X https://dl-cdn.alpinelinux.org/alpine/${alpine_version}/main -u alpine-keys --allow-untrusted
 RUN apk add --no-cache unbound
 
 ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-noarch.tar.xz /tmp
