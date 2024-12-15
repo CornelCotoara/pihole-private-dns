@@ -9,6 +9,7 @@ server:
     verbosity: 0
     
     interface: 127.0.0.1
+    interface-automatic: yes
     port: 5335
     do-ip4: yes
     do-udp: yes
